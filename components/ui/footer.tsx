@@ -19,7 +19,7 @@ const Footer = () => {
 
         <div className="h-80 flex">
           <div className="flex-[0.6]">
-            <h4 className="text-white font-semibold text-lg">EDUCATION</h4>
+            <h4 className="text-white my-5 font-semibold text-lg">EDUCATION</h4>
             <ul className="grid list-disc	 grid-cols-2 list-inside capitalize text-white">
               <li>How to read your prescription</li>
               <li>thinner lenses</li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-[0.2]">
-            <h4 className="text-white font-semibold text-lg">ABOUT US</h4>
+            <h4 className="text-white my-5 font-semibold text-lg">ABOUT US</h4>
             <ul className="grid list-disc	 list-inside capitalize text-white">
               <li>shipment & returns</li>
               <li>our story</li>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-[0.2]">
-            <h4 className="text-white font-semibold text-lg">EDUCATION</h4>
+            <h4 className="text-white my-5 font-semibold text-lg">EDUCATION</h4>
             <ul className="grid list-disc	  list-inside capitalize text-white">
               <li>How to read your prescription</li>
               <li>thinner lenses</li>

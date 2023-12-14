@@ -64,6 +64,15 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  .rings  {
+    border: 1px solid rgba(255, 255, 255, 0.102);
+    border-radius: 50%;
+    display: block;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+  }
 }
  
 @layer base {
