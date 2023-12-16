@@ -24,6 +24,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import useFilter from "@/hooks/use-filters";
 
 const formSchema = z.object({
   search: z.string().min(2, {
@@ -32,6 +33,7 @@ const formSchema = z.object({
 });
 
 const FiltersSection = () => {
+  const { toggleFilter } = useFilter();
   const [selectedKey, setSelectedKey] = useState<string>("");
   const onToggle = (key: string) => {
     console.log("key", key);
@@ -226,7 +228,11 @@ const FiltersSection = () => {
         <Button variant="link" className=" underline  text-xl" size={"lg"}>
           Reset All
         </Button>
-        <Button variant="default" className="p-6 mr-20 text-xl">
+        <Button
+          variant="default"
+          onClick={() => toggleFilter()}
+          className="p-6 mr-20 text-xl"
+        >
           Apply Filters
         </Button>
       </div>

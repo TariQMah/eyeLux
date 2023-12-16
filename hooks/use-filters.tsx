@@ -12,7 +12,7 @@ const useFilter = create(
     (set, get) => ({
       isOpen: false,
       toggleFilter: () => {
-        set({ isOpen: get().isOpen });
+        set({ isOpen: !get().isOpen });
       },
     }),
     {

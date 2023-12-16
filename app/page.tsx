@@ -11,11 +11,21 @@ import ProductGrid from "@/components/product-grid";
 import { homeProducts } from "@/contrants/products";
 import useCart from "@/hooks/use-cart";
 import useFilter from "@/hooks/use-filters";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const cart = useCart();
+  const [isMounted, setIsMounted] = useState(false);
+
   const filter = useFilter();
-  console.log("🚀 ~ file: page.tsx:18 ~ Home ~ filter:", filter);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="">
       <div className="container">
