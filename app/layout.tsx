@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/providers/theme-provider";
 
-import { Raleway } from "next/font/google";
+import { Raleway, Nova_Mono } from "next/font/google";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import type { Metadata } from "next";
@@ -15,10 +15,14 @@ export const metadata: Metadata = {
   description: "Store",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${font.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
