@@ -9,7 +9,6 @@ import Logos from "@/components/brands-logo";
 import OfferAnoucment from "@/components/offer-annoucment";
 import ProductGrid from "@/components/product-grid";
 import { homeProducts } from "@/contrants/products";
-import useCart from "@/hooks/use-cart";
 import useFilter from "@/hooks/use-filters";
 import { useEffect, useState } from "react";
 

@@ -1,12 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { MapPin, CircleUserRound } from "lucide-react";
 import { BsHeart, BsBagCheck } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 
 import Image from "next/image";
 import Navigation from "./navigation";
+import useCart from "@/hooks/use-cart";
 
 const Header = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  const { favItems, items } = useCart();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <div className="bg-white border-b border-[#D9D9D9]">
       <div className="container">
@@ -29,13 +43,13 @@ const Header = () => {
             <FiSearch className="w-9 h-9" />
             <div className="flex relative">
               <div className="z-10  text-white flex justify-center items-center text-sm absolute bg-[#1D3B58] rounded-full h-4 w-4 -top-3 -right-3">
-                1
+                {items?.length}
               </div>
               <BsBagCheck className="w-8 h-8" />
             </div>
             <div className="flex relative">
               <div className="z-10 text-white justify-center items-center flex text-sm absolute bg-[#1D3B58] rounded-full h-4 w-4 -top-3 -right-3">
-                1
+                {favItems.length}
               </div>
               <BsHeart className="w-8 h-8" />
             </div>
