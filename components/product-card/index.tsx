@@ -32,7 +32,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   const isFav = cart.favItems?.find((item: any) => item?.id === id);
-  console.log("🚀 ~ file: index.tsx:33 ~ isFav:", isFav);
 
   return (
     <div className="pt-10" onClick={() => addToCart()}>

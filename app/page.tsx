@@ -36,16 +36,19 @@ export default function Home() {
         <div className="p-10">
           <Heading text="Alcon" className="text-4xl text-center px-2" />
         </div>
+      </div>
+      <div className="sm:container sm:mb-16">
         <OfferAnoucment />
       </div>
+
       <ProductGrid products={homeProducts[0].products} />
-      <div className="container">
-        <div className="pt-24 pb-12">
+      <div className="sm:container">
+        <div className="my-10 sm:pt-24 sm:pb-12">
           <OfferAnoucment />
         </div>
         <Heading text="Coopper Vision" className="text-4xl text-center px-2" />
       </div>
-      <div className="my-20">
+      <div className="my-10 sm:my-20">
         <ProductGrid products={homeProducts[1].products} />
       </div>
       <div className="container">
